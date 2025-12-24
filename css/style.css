@@ -94,26 +94,31 @@ body {
     border-radius: 6px;
 }
 
-/* Appointment */
-.appointment {
-    background: #eef6ee;
-    padding: 40px 0;
+/* Appointment Tabs – styled */
+.tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
 }
-.appointment form {
-    max-width: 500px;
-}
-.appointment input,
-.appointment textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-.appointment button {
-    background: #2e7d32;
-    color: #fff;
-    padding: 10px 20px;
+
+.tab-btn {
+    background: #e6f4ea;            /* light green */
+    color: #000;
+    font-weight: bold;
+    padding: 12px 28px;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background: #b7e4c7;            /* darker green */
+}
+
+.tab-btn:hover {
+    transform: translateY(-1px);
 }
 
 /* Contact */
@@ -237,5 +242,6 @@ footer {
     font-size: 16px;
     cursor: pointer;
 }
+
 
 
