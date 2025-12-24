@@ -244,4 +244,23 @@ footer {
 }
 
 
+.service-select {
+    width: 260px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.date-btn {
+    width: 160px;                  /* SAME as slot buttons */
+    padding: 10px;
+    border: 1px solid #2e7d32;
+    background: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.hidden-date {
+    display: none;
+}
+
 
