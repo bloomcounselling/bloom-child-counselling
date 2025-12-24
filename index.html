@@ -148,13 +148,17 @@ function payNow() {
         <div id="clinic" class="tab-content active">
             <p><strong>Consultation Fees:</strong> ₹500</p>
 
-            <label>Select Service</label>
-            <select>
-                <option>Consultation</option>
-            </select>
+            <h4>Select Service</h4>
+<select class="service-select">
+    <option>Consultation</option>
+</select>
 
-            <label>Select Date</label>
-            <input type="date" id="clinicDate">
+<h4>Select Date</h4>
+<button class="date-btn" onclick="openDatePicker('clinicDate')">
+    Select a Date
+</button>
+<input type="date" id="clinicDate" class="hidden-date">
+
 
             <h4>Available Slots</h4>
             <div class="slots">
@@ -234,6 +238,7 @@ Child Counselling Center in Siliguri near North Bengal Medical College, Susrutna
 
 </body>
 </html>
+
 
 
 
