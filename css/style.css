@@ -139,3 +139,17 @@ footer {
     padding: 12px 0;
     font-size: 14px;
 }
+.bn { display: none; }
+
+.bn-active .en { display: none; }
+.bn-active .bn { display: inline; }
+
+.lang-btn {
+    background: white;
+    color: #2e7d32;
+    border: none;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
