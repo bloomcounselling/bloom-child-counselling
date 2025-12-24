@@ -153,22 +153,43 @@ footer {
     font-size: 14px;
 }
 
-/* Certificate Gallery – equal height, aspect ratio preserved */
-.cert-gallery img {
-    height: 260px;        /* SAME height on PC */
-    width: auto;          /* Auto width keeps aspect ratio */
-    object-fit: contain;  /* No cropping */
-    background: #fff;
-    padding: 8px;
-    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+/* Certificate Gallery – equal height AND equal spacing */
+.cert-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* exactly three columns on PC */
+    gap: 30px;                              /* SAME distance between all */
+    align-items: center;
 }
 
-/* Mobile adjustment */
-@media (max-width: 768px) {
+.cert-gallery img {
+    height: 260px;        /* equal visible height */
+    width: auto;          /* preserve aspect ratio */
+    margin: auto;         /* centers image in its grid cell */
+    object-fit: contain;  /* no cropping */
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.12);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .cert-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .cert-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
     .cert-gallery img {
         height: 200px;
     }
 }
+
 
 /* Tabs */
 .tabs {
@@ -216,4 +237,5 @@ footer {
     font-size: 16px;
     cursor: pointer;
 }
+
 
