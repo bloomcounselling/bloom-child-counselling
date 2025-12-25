@@ -4,93 +4,30 @@
     <meta charset="UTF-8">
     <title>Bloom Child Counselling Center | Siliguri</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="Bloom Child Counselling Center in Siliguri offers child counselling, ADHD therapy, speech therapy, learning disorder treatment, mobile addiction counselling and career guidance near North Bengal Medical College.">
     <meta name="keywords" content="Child Counselling Center Siliguri, Child Psychologist Siliguri, ADHD Therapy Siliguri, Speech Therapy Siliguri, Learning Disorder Treatment Siliguri, Career Counselling Siliguri">
     <meta name="author" content="Bloom Child Counselling Center">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-    <script>
-function openTab(tabId) {
-    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-    document.getElementById(tabId).classList.add('active');
-    event.target.classList.add('active');
-}
-
-/* Date range: today to next 7 days */
-function setDateLimits(id) {
-    const input = document.getElementById(id);
-    const today = new Date();
-    const maxDate = new Date();
-    maxDate.setDate(today.getDate() + 7);
-
-    input.min = today.toISOString().split("T")[0];
-    input.max = maxDate.toISOString().split("T")[0];
-}
-
-setDateLimits("clinicDate");
-setDateLimits("teleDate");
-
-/* Razorpay Payment */
-function payNow() {
-    var options = {
-        "key": "rzp_test_RukSGNdMPjAiNF",
-        "amount": 50000,
-        "currency": "INR",
-        "name": "Bloom Child Counselling Center",
-        "description": "Consultation Fees",
-        "handler": function (response){
-            alert("Payment Successful. ID: " + response.razorpay_payment_id);
-        },
-        "prefill": {
-            "contact": "",
-        },
-        "theme": {
-            "color": "#2e7d32"
-        }
-    };
-    var rzp = new Razorpay(options);
-    rzp.open();
-}
-</script>
-
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
-<script>
-function openTab(evt, tabId) {
-    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-    document.getElementById(tabId).classList.add('active');
-    evt.currentTarget.classList.add('active');
-}
-
-/* Android-safe date picker */
-function openDatePicker(id) {
-    const input = document.getElementById(id);
-    input.focus();
-    input.click();
-}
-
-/* Slot selection */
-document.addEventListener("click", function(e) {
-    if (e.target.classList.contains("slot-btn")) {
-        const slots = e.target.parentElement.querySelectorAll(".slot-btn");
-        slots.forEach(btn => btn.classList.remove("selected"));
-        e.target.classList.add("selected");
-    }
-});
-</script>
 
 <body>
 
-<!-- TOP CONTACT BAR -->
+<!-- TOP BAR -->
 <div class="top-bar">
-    <button onclick="toggleLanguage()" class="lang-btn">বাংলা</button>
-     <div class="container">
-        <span>📞 +91 9046250135</span>
-        <a href="https://wa.me/919046250135?text=Hello%20Bloom%20Child%20Counselling%20Center.%20I%20would%20like%20to%20enquire%20about%20counselling%20for%20my%20child." target="_blank">
-        💬 WhatsApp Chat
-        </a>
+    <div class="container">
+        <button class="lang-btn" onclick="toggleLanguage()">বাংলা</button>
+
+        <div>
+            <a href="tel:+919046250135">📞 +91 9046250135</a>
+            &nbsp; | &nbsp;
+            <a href="https://wa.me/919046250135?text=Hello%20Bloom%20Child%20Counselling%20Center.%20I%20would%20like%20to%20enquire%20about%20counselling%20for%20my%20child." target="_blank">
+                💬 WhatsApp
+            </a>
+            &nbsp; | &nbsp;
+            <a href="https://www.facebook.com/share/1B86kuwY4u/" target="_blank">
+                📘 Facebook
+            </a>
+        </div>
     </div>
 </div>
 
@@ -99,13 +36,19 @@ document.addEventListener("click", function(e) {
     <img src="images/banner.png" alt="Bloom Child Counselling Center">
 </section>
 
-<!-- HEADER WITH LOGO -->
+<!-- HEADER -->
 <header class="main-header">
     <div class="container header-flex">
         <img src="images/Logo.png" class="logo" alt="Bloom Logo">
         <div>
-            <h1>BLOOM CHILD COUNSELLING CENTER</h1>
-            <p>Near North Bengal Medical College, P.O- Susrutnagar, Siliguri, Dist- Darjeeling, PIN- 734012</p>
+            <h1>
+                <span class="en">BLOOM CHILD COUNSELLING CENTER</span>
+                <span class="bn">ব্লুম চাইল্ড কাউন্সেলিং সেন্টার</span>
+            </h1>
+            <p>
+                <span class="en">Near North Bengal Medical College, Susrutnagar, Siliguri</span>
+                <span class="bn">নর্থ বেঙ্গল মেডিকেল কলেজের নিকটবর্তী, শুশ্রুতনগর, শিলিগুড়ি</span>
+            </p>
         </div>
     </div>
 </header>
@@ -123,7 +66,7 @@ document.addEventListener("click", function(e) {
             <p>
                 Bloom Child Counselling Center provides structured counselling,
                 therapy, and guidance for children facing emotional, behavioral,
-                learning, and developmental challenges, with compassionate parental support.
+                learning, and developmental challenges.
             </p>
         </div>
     </div>
@@ -145,31 +88,29 @@ document.addEventListener("click", function(e) {
     </div>
 </section>
 
-<!-- GALLERY -->
+<!-- CERTIFICATES -->
 <section class="gallery">
     <div class="container">
-        <h2>Achivements</h2>
-        <<div class="gallery-grid cert-gallery">
+        <h2>Achievements</h2>
+        <div class="gallery-grid cert-gallery">
             <img src="images/Cert_2.png" alt="Certificate 2">
             <img src="images/Cert_1.png" alt="Certificate 1">
             <img src="images/Cert_3.png" alt="Certificate 3">
         </div>
-
     </div>
 </section>
 
-<!-- APPOINTMENT SECTION -->
+<!-- APPOINTMENT -->
 <section class="appointment">
     <div class="container">
         <h2>Book an Appointment</h2>
 
-        <!-- Tabs -->
         <div class="tabs">
             <button class="tab-btn active" onclick="openTab(event,'clinic')">In-Clinic</button>
             <button class="tab-btn" onclick="openTab(event,'tele')">Tele-Consult</button>
         </div>
 
-        <!-- IN-CLINIC -->
+        <!-- IN CLINIC -->
         <div id="clinic" class="tab-content active">
             <p><strong>Consultation Fees:</strong> ₹500 per sitting</p>
 
@@ -179,9 +120,7 @@ document.addEventListener("click", function(e) {
             </select>
 
             <h4>Select Date</h4>
-            <button class="action-btn" onclick="openDatePicker('clinicDate')">
-                Select a Date
-            </button>
+            <button class="action-btn" onclick="openDatePicker('clinicDate')">Select a Date</button>
             <input type="date" id="clinicDate" class="hidden-date">
 
             <h4>Available Slots</h4>
@@ -197,7 +136,7 @@ document.addEventListener("click", function(e) {
             <button class="pay-btn" onclick="payNow()">Proceed to Pay ₹500</button>
         </div>
 
-        <!-- TELE-CONSULT -->
+        <!-- TELE -->
         <div id="tele" class="tab-content">
             <p><strong>Consultation Fees:</strong> ₹500 per sitting</p>
 
@@ -207,9 +146,7 @@ document.addEventListener("click", function(e) {
             </select>
 
             <h4>Select Date</h4>
-            <button class="action-btn" onclick="openDatePicker('teleDate')">
-                Select a Date
-            </button>
+            <button class="action-btn" onclick="openDatePicker('teleDate')">Select a Date</button>
             <input type="date" id="teleDate" class="hidden-date">
 
             <h4>Available Slots</h4>
@@ -227,60 +164,76 @@ document.addEventListener("click", function(e) {
     </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
-    <div class="container contact-flex">
-        <div>
-            <h2>Contact Us</h2>
-            <p>
-                Near North Bengal Medical College<br>
-                P.O – Susrutnagar, Siliguri<br>
-                Dist – Darjeeling, PIN – 734012<br><br>
-                📞 +91 9046250135<br>
-                💬 WhatsApp: +91 9046250135
-            </p>
-        </div>
-
-        <!-- GOOGLE MAP -->
-        <div class="map">
-            <iframe
-                src="https://www.google.com/maps?q=North%20Bengal%20Medical%20College%20Siliguri&output=embed"
-                allowfullscreen
-                loading="lazy">
-            </iframe>
-        </div>
-    </div>
-</section>
-<div style="display:none">
-Child Counselling Center in Siliguri near North Bengal Medical College, Susrutnagar, Darjeeling District, West Bengal.
-</div>
-
-<div style="text-align:center; margin: 40px 0;">
+<!-- FOOTER LINKS -->
+<div style="text-align:center; margin:40px 0;">
     <a href="privacy.html">Privacy Policy</a> |
     <a href="terms.html">Terms & Conditions</a> |
     <a href="refund.html">Refund / Cancellation Policy</a> |
     <a href="contact.html">Contact</a>
 </div>
 
-<!-- FOOTER -->
 <footer>
     <p>© 2025 Bloom Child Counselling Center | Siliguri</p>
 </footer>
 
+<!-- ===================== SCRIPTS ===================== -->
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+function toggleLanguage() {
+    document.body.classList.toggle("bn-active");
+}
+
+function openTab(evt, id) {
+    document.querySelectorAll(".tab-content").forEach(d => d.classList.remove("active"));
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+
+function openDatePicker(id) {
+    const input = document.getElementById(id);
+    const today = new Date();
+    const max = new Date();
+    max.setDate(today.getDate() + 7);
+
+    const fmt = d => d.toISOString().split("T")[0];
+    input.min = fmt(today);
+    input.max = fmt(max);
+
+    input.focus();
+    input.dispatchEvent(new MouseEvent("mousedown", { bubbles:true }));
+    input.dispatchEvent(new MouseEvent("mouseup", { bubbles:true }));
+    input.click();
+}
+
+document.addEventListener("change", function(e) {
+    if (e.target.classList.contains("hidden-date")) {
+        e.target.previousElementSibling.innerText =
+            new Date(e.target.value).toLocaleDateString("en-GB");
+    }
+});
+
+document.addEventListener("click", function(e) {
+    if (e.target.classList.contains("slot-btn")) {
+        e.target.parentElement.querySelectorAll(".slot-btn")
+            .forEach(b => b.classList.remove("selected"));
+        e.target.classList.add("selected");
+    }
+});
+
+function payNow() {
+    new Razorpay({
+        key: "rzp_test_RukSGNdMPjAiNF",
+        amount: 50000,
+        currency: "INR",
+        name: "Bloom Child Counselling Center",
+        description: "Consultation Fees",
+        theme: { color: "#2e7d32" }
+    }).open();
+}
+</script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
