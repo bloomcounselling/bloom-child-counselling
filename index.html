@@ -133,73 +133,72 @@ function payNow() {
     </div>
 </section>
 
-<!-- APPOINTMENT FORM -->
+<!-- APPOINTMENT SECTION -->
 <section class="appointment">
     <div class="container">
         <h2>Book an Appointment</h2>
 
         <!-- Tabs -->
         <div class="tabs">
-            <button class="tab-btn active" onclick="openTab('clinic')">In-Clinic</button>
-            <button class="tab-btn" onclick="openTab('tele')">Tele-Consult</button>
+            <button class="tab-btn active" onclick="openTab(event,'clinic')">In-Clinic</button>
+            <button class="tab-btn" onclick="openTab(event,'tele')">Tele-Consult</button>
         </div>
 
-        <!-- In Clinic -->
+        <!-- IN-CLINIC -->
         <div id="clinic" class="tab-content active">
             <p><strong>Consultation Fees:</strong> ₹500 per sitting</p>
 
             <h4>Select Service</h4>
-<select class="service-select">
-    <option>Consultation</option>
-</select>
+            <select class="service-select">
+                <option>Consultation</option>
+            </select>
 
-<h4>Select Date</h4>
-<button class="date-btn" onclick="openDatePicker('clinicDate')">
-    Select a Date
-</button>
-<input type="date" id="clinicDate" class="hidden-date">
-
+            <h4>Select Date</h4>
+            <button class="action-btn" onclick="openDatePicker('clinicDate')">
+                Select a Date
+            </button>
+            <input type="date" id="clinicDate" class="hidden-date">
 
             <h4>Available Slots</h4>
             <div class="slots">
-                <button>10:00 – 11:00 AM</button>
-                <button>11:00 – 12:00 PM</button>
-                <button>05:00 – 06:00 PM</button>
-                <button>06:00 – 07:00 PM</button>
-                <button>07:00 – 08:00 PM</button>
-                <button>08:00 – 09:00 PM</button>
+                <button class="slot-btn">10:00 – 11:00 AM</button>
+                <button class="slot-btn">11:00 – 12:00 PM</button>
+                <button class="slot-btn">05:00 – 06:00 PM</button>
+                <button class="slot-btn">06:00 – 07:00 PM</button>
+                <button class="slot-btn">07:00 – 08:00 PM</button>
+                <button class="slot-btn">08:00 – 09:00 PM</button>
             </div>
 
             <button class="pay-btn" onclick="payNow()">Proceed to Pay ₹500</button>
         </div>
 
-        <!-- Tele Consult -->
+        <!-- TELE-CONSULT -->
         <div id="tele" class="tab-content">
-            <p><strong>Consultation Fees:</strong> ₹500</p>
+            <p><strong>Consultation Fees:</strong> ₹500 per sitting</p>
 
-            <label>Select Service</label>
-            <select>
+            <h4>Select Service</h4>
+            <select class="service-select">
                 <option>Tele Consultation</option>
             </select>
 
-            <label>Select Date</label>
-            <input type="date" id="teleDate">
+            <h4>Select Date</h4>
+            <button class="action-btn" onclick="openDatePicker('teleDate')">
+                Select a Date
+            </button>
+            <input type="date" id="teleDate" class="hidden-date">
 
             <h4>Available Slots</h4>
             <div class="slots">
-                <button>10:00 – 11:00 AM</button>
-                <button>11:00 – 12:00 PM</button>
-                <button>05:00 – 06:00 PM</button>
-                <button>06:00 – 07:00 PM</button>
-                <button>07:00 – 08:00 PM</button>
-                <button>08:00 – 09:00 PM</button>
+                <button class="slot-btn">10:00 – 11:00 AM</button>
+                <button class="slot-btn">11:00 – 12:00 PM</button>
+                <button class="slot-btn">05:00 – 06:00 PM</button>
+                <button class="slot-btn">06:00 – 07:00 PM</button>
+                <button class="slot-btn">07:00 – 08:00 PM</button>
+                <button class="slot-btn">08:00 – 09:00 PM</button>
             </div>
 
             <button class="pay-btn" onclick="payNow()">Proceed to Pay ₹500</button>
         </div>
-    </div>
-</section>
-
     </div>
 </section>
 
@@ -245,6 +244,7 @@ Child Counselling Center in Siliguri near North Bengal Medical College, Susrutna
 
 </body>
 </html>
+
 
 
 
