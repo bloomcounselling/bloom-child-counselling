@@ -1,3 +1,5 @@
+/* ===================== BASE ===================== */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -11,191 +13,149 @@ body {
     margin: auto;
 }
 
-/* Top Bar */
+/* ===================== TOP BAR ===================== */
+
 .top-bar {
     background: #2e7d32;
     color: #fff;
     font-size: 14px;
 }
+
 .top-bar .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 8px 0;
 }
+
 .top-bar a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* Banner */
+.lang-btn {
+    background: #fff;
+    color: #2e7d32;
+    border: none;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ===================== BANNER & HEADER ===================== */
+
 .banner img {
     width: 100%;
     display: block;
 }
 
-/* Header */
 .main-header {
     background: #f4f4f4;
     padding: 15px 0;
 }
+
 .header-flex {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .logo {
     height: 75px;
 }
 
-/* About */
+/* ===================== LANGUAGE TOGGLE ===================== */
+
+.bn {
+    display: none;
+}
+
+.bn-active .en {
+    display: none;
+}
+
+.bn-active .bn {
+    display: inline;
+}
+
+/* ===================== ABOUT ===================== */
+
 .about {
     padding: 40px 0;
 }
+
 .about-flex {
     display: flex;
     gap: 30px;
     align-items: center;
 }
+
 .about img {
     width: 220px;
     border-radius: 6px;
 }
+
 .qualification {
     font-weight: bold;
 }
 
-/* Services */
+/* ===================== SERVICES ===================== */
+
 .services {
     background: #f9f9f9;
     padding: 40px 0;
 }
+
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
 }
+
 .service-grid div {
     background: #fff;
     padding: 15px;
     border-left: 4px solid #4CAF50;
 }
 
-/* Gallery */
-.gallery {
-    padding: 40px 0;
-}
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-.gallery-grid img {
-    width: 100%;
-    border-radius: 6px;
-}
+/* ===================== CERTIFICATES ===================== */
 
-
-/* Contact */
-.contact {
-    padding: 40px 0;
-}
-.contact-flex {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-.map iframe {
-    width: 100%;
-    height: 250px;
-    border: 0;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 12px 0;
-    font-size: 14px;
-}
-.bn { display: none; }
-
-.bn-active .en { display: none; }
-.bn-active .bn { display: inline; }
-
-.lang-btn {
-    background: white;
-    color: #2e7d32;
-    border: none;
-    padding: 4px 10px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-/* Certificate Gallery – equal height AND equal spacing */
 .cert-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* exactly three columns on PC */
-    gap: 30px;                              /* SAME distance between all */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     align-items: center;
 }
 
 .cert-gallery img {
-    height: 260px;        /* equal visible height */
-    width: auto;          /* preserve aspect ratio */
-    margin: auto;         /* centers image in its grid cell */
-    object-fit: contain;  /* no cropping */
+    height: 260px;
+    width: auto;
+    margin: auto;
+    object-fit: contain;
     background: #fff;
     padding: 10px;
     box-shadow: 0 0 6px rgba(0,0,0,0.12);
 }
 
-/* Tablet */
 @media (max-width: 900px) {
     .cert-gallery {
         grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
     }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
     .cert-gallery {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
     .cert-gallery img {
         height: 200px;
     }
 }
 
+/* ===================== APPOINTMENT ===================== */
 
-.service-select {
-    width: 260px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-.date-btn {
-    width: 160px;                  /* SAME as slot buttons */
-    padding: 10px;
-    border: 1px solid #2e7d32;
-    background: #fff;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-
-/* Layout */
-.service-select {
-    width: 260px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-/* ========== APPOINTMENT SECTION – FINAL CLEAN CSS ========== */
-
-/* Tabs */
 .tabs {
     display: flex;
     gap: 15px;
@@ -204,7 +164,7 @@ footer {
 
 .tab-btn {
     background: #2e7d32;
-    color: #ffffff;
+    color: #fff;
     font-weight: bold;
     padding: 12px 28px;
     border: none;
@@ -217,43 +177,40 @@ footer {
     background: #1b5e20;
 }
 
-/* Tab content visibility */
 .tab-content {
     display: none;
 }
+
 .tab-content.active {
     display: block;
 }
 
-/* Service dropdown */
 .service-select {
     width: 260px;
     padding: 10px;
     margin-bottom: 20px;
 }
 
-/* Date button */
 .action-btn {
     width: 160px;
     padding: 10px;
     background: #2e7d32;
-    color: #ffffff;
+    color: #fff;
     border: none;
+    font-weight: bold;
     cursor: pointer;
     margin-bottom: 20px;
-    font-weight: bold;
     box-shadow: 0 4px 8px rgba(0,0,0,0.25);
 }
 
-/* Hidden date input (mobile-safe) */
+/* Hidden date input – WORKS on mobile & desktop */
 .hidden-date {
     position: absolute;
     opacity: 0;
-    pointer-events: none;
-    height: 0;
+    left: -9999px;
 }
 
-/* Slots container */
+/* Slots */
 .slots {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -261,34 +218,58 @@ footer {
     margin-bottom: 25px;
 }
 
-/* Slot buttons – DEFAULT STATE (VISIBLE TEXT) */
 .slot-btn {
     background: #2e7d32;
-    color: #ffffff;
+    color: #fff;
     border: none;
-    padding: 10px;
+    padding: 12px 10px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    text-align: center;
 }
 
-/* Slot selected */
 .slot-btn.selected {
     background: #f8d7da;
-    color: #000000;
+    color: #000;
 }
 
 /* Pay button */
 .pay-btn {
     background: #2e7d32;
-    color: #ffffff;
+    color: #fff;
     padding: 12px 25px;
     border: none;
     font-size: 16px;
-    cursor: pointer;
     font-weight: bold;
+    cursor: pointer;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
+/* ===================== CONTACT ===================== */
 
+.contact {
+    padding: 40px 0;
+}
 
+.contact-flex {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.map iframe {
+    width: 100%;
+    height: 250px;
+    border: 0;
+}
+
+/* ===================== FOOTER ===================== */
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+}
